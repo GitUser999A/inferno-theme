@@ -1,0 +1,273 @@
+@font-face {
+  font-family: MADE Evolve Sans Thin;
+  src: url(MEST.woff);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+.sidenav {
+  font-family: MADE Evolve Sans Thin;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2C3E50;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#sideMenuWrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 50px;
+  padding: 16px 0px 16px 0px;
+  margin: 0px;
+}
+
+.sideMenu {
+  opacity: 0.6;
+  transition: 0.3s;
+  list-style-type: none;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 23px;
+  height: 23px;
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.menu {
+  background-image: url(assets/menu-icon.png);
+}
+
+.settings {
+  background-image: url(assets/settings-icon.png);
+}
+
+.connection {
+  background-image: url(assets/connection-icon.png);
+}
+
+.logout {
+  background-image: url(assets/logout-icon.png);
+  float: right;
+}
+
+.menu:hover, .settings:hover, .connection:hover, .logout:hover {
+  opacity: 1;
+}
+
+#speetTab {
+  margin-top: 22px;
+  width: 300px;
+  height: 100px;
+}
+
+#downSpeed {
+  font-family: MADE Evolve Sans Thin;
+  display: block;
+  width: 130px;
+  height: 50px;
+  margin-left: 25px;
+  float: left;
+  background-image: url(assets/downspeed-icon.png);
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: center;
+  font-size: 20pt;
+  color: #2ECC71;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+
+.green {
+  font-size: 8pt;
+}
+
+#upSpeed {
+  font-family: MADE Evolve Sans Thin;
+  display: block;
+  width: 130px;
+  height: 50px;
+  float: right;
+  background-image: url(assets/upspeed-icon.png);
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+  background-position-y: center;
+  font-size: 20pt;
+  color: #3498DB;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+
+.blue {
+  font-size: 8pt;
+}
+
+
+#topNav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #C9D4D7;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #B4BEC0;
+}
+
+
+#topMenuWrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.topMenu {
+  opacity: 0.6;
+  transition: 0.3s;
+  list-style-type: none;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 23px;
+  height: 23px;
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.deluge {
+  background-image: url(assets/deluge-logo.png);
+  width: 73px;
+  height: 50px;
+  float: left;
+}
+
+.add {
+  background-image: url(assets/add-icon.png);
+  width: 20px;
+  height: 50px;
+}
+
+.remove {
+  background-image: url(assets/remove-icon.png);
+  width: 20px;
+  height: 50px;
+}
+
+.pause {
+  background-image: url(assets/pause-icon.png);
+  width: 20px;
+  height: 50px;
+}
+
+.start {
+  background-image: url(assets/start-icon.png);
+  width: 20px;
+  height: 50px;
+}
+
+.up {
+  background-image: url(assets/up-icon.png);
+  width: 20px;
+  height: 50px;
+}
+
+.down {
+  background-image: url(assets/up-icon.png);
+  width: 20px;
+  height: 50px;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+
+
+.add, .remove, .pause, .start, .up, .down {
+  float: right;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  margin-left: 300px;
+}
+
+#sortPanel {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #EEF2F3;
+}
+
+#sortOrder {
+  display: inline;
+  text-decoration: none;
+  width: 100%;
+  height: 50px;
+}
+
+.sortBy {
+  font-family: MADE Evolve Sans Thin;
+  display: block;
+  width: 200px;
+  height: 50px;
+  float: left;
+  font-size: 16pt;
+  color: #B4BEC0;
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+.name {
+  width: 300px;
+}

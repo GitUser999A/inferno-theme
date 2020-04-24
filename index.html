@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Deluge WebUI ${version}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/css/inferno-style.css">
+     <!-- Stylesheets -->
+        % for stylesheet in stylesheets:
+        <link rel="stylesheet" type="text/css" href="${base}${stylesheet}"/>
+        % endfor
+
+        <script type="text/javascript">
+        deluge = {
+            author: 'Deluge Team',
+            version: '${version}',
+            config: ${js_config}
+        }
+        </script>
+
+        <!-- Javascript -->
+        % for script in scripts:
+        <script type="text/javascript" src="${base}${script}"></script>
+        % endfor
+
+</head>
+<body>
+
+<nav id="infernoNav" class="sidenav">
+
+  <ul id="sideMenuWrapper">
+    <li class="menu sideMenu" onclick="closeNav()"></li>
+    <li class="settings sideMenu"></li>
+    <li class="connection sideMenu"></li>
+    <li class="logout sideMenu" ></li>
+  </ul>
+
+
+<div id="speetTab">
+  <div id="downSpeed">0.00 <span class="green">MB/s</span></div>
+  <div id="upSpeed">0.00 <span class="blue">MB/s</span></div>
+</div>
+
+
+
+  <a href="#">All (0)</a>
+  <a href="#">Downloading (0)</a>
+  <a href="#">Seeding (0)</a>
+  <a href="#">Active (0)</a>
+  <a href="#">Paused (0)</a>
+  <a href="#">Queued (0)</a>
+</nav>
+
+<div id="main">
+
+  <div id="topNav">
+    <ul id="topMenuWrapper">
+      <li class="deluge topMenu" onclick="openNav()"></li>
+      <li class="add topMenu"></li>
+      <li class="remove topMenu"></li>
+      <li class="pause topMenu"></li>
+      <li class="start topMenu"></li>
+      <li class="up topMenu"></li>
+      <li class="down topMenu"></li>
+    </ul>
+  </div>
+
+<table>
+  <thead id="sortPanel">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Progress</th>
+      <th>Down speed</th>
+	  <th>Up speed</th>
+	  <th>ETA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tname">#</td>
+      <td class="tsize">#</td>
+      <td class="tprogress">#</td>
+      <td class="tdownspeed">#</td>
+      <td class="tupspeed">#</td>
+      <td class="teta">#</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("infernoNav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+function closeNav() {
+  document.getElementById("infernoNav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
